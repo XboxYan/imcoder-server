@@ -1,0 +1,21 @@
+{
+  "name": "imcoder-server",
+  "version": "1.0.0",
+  "description": "Realtime application framework (for imcoderlove_letter)",
+  "main": "index.js",
+  "scripts": {
+    "start": " nodemon index.js"
+  },
+  "repository": "https://github.com/XboxYan/imcoder-server.git",
+  "author": "XboxYan <yanwenbin1991@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
