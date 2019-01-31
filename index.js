@@ -34,12 +34,9 @@ io.on('connection', (socket) => {
         io.emit('INIT', messageList);
     });
     socket.on('UPDATA_MESSAGE', (msg) => {
-        messageList.push(msg);
-        io.emit('UPDATA_MESSAGE', msg);
-    });
-    socket.on('chat message', (msg) => {
-        console.log('message: ' + msg);
-        io.emit('chat message', msg);
+        const item = {...msg,key:'im'+new Date().valueOf()}
+        messageList.push(item);
+        io.emit('UPDATA_MESSAGE', item);
     });
     socket.on('disconnect', () => {
         console.log('user disconnected');
